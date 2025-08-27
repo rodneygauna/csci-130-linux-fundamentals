@@ -1,4 +1,4 @@
-# CSCI-130 Linux Fundamentals - Week 1 (August, 26, 2025)
+# CSCI-130 Linux Fundamentals - Week 1 (August, 26, 2025) Lecture Notes
 
 The course is an introduction to foundamental end-user skills and tools in Linux, designed for students with little or no command-line Linux or UNIX experience. Emphasis on shell script programming to create tools, applications and to automate routine functions.
 
@@ -154,7 +154,8 @@ Examples of absolute and relative paths:
 Scenarios:
 
 Changing to a directory using an absolute path:
-1. Navigating to the `/var/log` directory:
+
+**Scenario 1** Navigating to the `/var/log` directory:
 
 ```bash
 $ cd /var/log
@@ -162,7 +163,7 @@ $ pwd
 /var/log
 ```
 
-2. Navigating to the `tmp` directory:
+**Scenarion 2** Navigating to the `tmp` directory:
 
 ```bash
 $ cd /tmp
@@ -172,7 +173,8 @@ $ pwd
 
 Changing to a directory using a relative path:
 
-1. Navigating to the `Documents` directory from the `home` directory:
+**Scenario 3** Navigating to the `Documents` directory from the `home` directory:
+
 ```bash
 $ pwd
 /home/username
@@ -181,7 +183,8 @@ $ pwd
 /home/username/Documents
 ```
 
-2. Navigating to the `Documents` directory from the `tmp` directory:
+**Scenario 4** Navigating to the `Documents` directory from the `tmp` directory:
+
 ```bash
 $ pwd
 /tmp
@@ -190,7 +193,8 @@ $ pwd
 /home/username/Documents
 ```
 
-3. Navigating from the user's `Documents` directory to the `tmp` directory:
+**Scenario 5** Navigating from the user's `Documents` directory to the `tmp` directory:
+
 ```bash
 $ pwd
 /home/username/Documents
