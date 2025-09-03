@@ -4,7 +4,16 @@
 
 - Attendance on Canvas
 - Quick review: setup VM and running first few commands
-- Review: few way
+- Review: few ways to go to different directories
+- History
+- Autocompletion feature
+- Three things to always know; who am I, where am I, what am I using
+- Aliases
+- Semicolons
+- Escaping special characters
+- What is the shell?
+- Subshell
+- Listing the content of the directory
 
 P.S. did a very demonstration of how to setup VirtualBox and ran Fedora 42 as a live user.
 He then showed the 'pwd' and 'cd' commands.
@@ -60,6 +69,8 @@ History is stored at the session level. I'll need to add more information about 
 
 Discussed the 'whoami' command
 
+Discussed the 'hostname' command (which is the name of the machine).
+
 Showed an example of the 'alias' command. the alias command creates a keyword shortcut that run a full command.
 
 ```bash
@@ -84,4 +95,57 @@ To make the above work, use an escape. For example, `alias whoami="echo don\'t p
 Note the ';' ends the command. In the example above, it ran the 'time' command and then ran the echo.
 
 Typing the 'alias' command will give a list of all the aliases stored.
+
+## What is the Shell
+
+I need add my pervious notes about that the shell is and how it compares to Bash.
+
+Demonstrated subshells by using the 'sh' command.
+
+## Listing the content of the directory
+
+The 'ls' command lists the directory (file structre).
+There are many different parameters that can be used.
+
+```bash
+> ls
+Desktop Downloads Pictures Templates Documents Music Video
+```
+
+You can print out the files in a list format
+
+```bash
+>ls -l
+Desktop
+Downloads
+Pictures
+Templates
+```
+
+You can print out the files in a list format and hidden files.
+
+```bash
+>ls -la
+.bash
+.bashrc
+Desktop
+...
+```
+
+## Preview around permissions
+
+During the explaination of 'ls' there was a conversation around permissons.
+
+It's by owner, group, other
+
+| owner	| group	| other	|
+| ---	| ---	| ---	|
+| -rwx	| rw-	| r--	|
+
+If the listed file is a directory, it will display 'drwx'.
+
+| owner	| group	| other	|
+| ---	| ---	| ---	|
+| drwx	| r-x	| r-x	|
+
 
