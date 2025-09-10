@@ -1,0 +1,41 @@
+    1  pwd
+    2  alias lsa
+    3  which ls
+    4  lsa
+    5  mkdir csci-130-assignment
+    6  mkdir csci-130-assignment/folder1
+    7  mkdir csci-130-assignment/folder1subfolder
+    8  mkdir csci-130-assignment/folder2
+    9  mkdir csci-130-assignment/folder2/folder2subfolder
+   10  touch csci-130-assignment/root{1..5}
+   11  touch csci-130-assignment/folder1/folder1_file{1..5}
+   12  lsa csci-130-assignment/
+   13  cp csci-130-assignment/folder1subfolder/ csci-130-assignment/folder1/
+   14  cp -r csci-130-assignment/folder1subfolder/ csci-130-assignment/folder1/
+   15  lsa csci-130-assignment/
+   16  lsa csci-130-assignment/folder1
+   17  touch csci-130-assignment/folder1/folder1subfolder/f1sub_file{1..5}
+   18  lsa csci-130-assignment/folder1/folder1subfolder/
+   19  touch csci-130-assignment/folder2/folder2_file{1..6}
+   20  ls -lat csci-130-assignment/
+   21  ls -la csci-130-assignment/
+   22  mkdir csci-130-assignment/deleteThisFolder
+   23  mkdir csci-130-assignment/deleteThisFolderWithFiles
+   24  touch csci-130-assignment/deleteThisFolderWithFiles/recursiveDelete_file{1..100}
+   25  lsa csci-130-assignment/deleteThisFolder
+   26  lsa csci-130-assignment/deleteThisFolderWithFiles/
+   27  cp csci-130-assignment/folder1/* csci-130-assignment/deleteThisFolderWithFiles/
+   28  lsa csci-130-assignment/deleteThisFolderWithFiles/
+   29  lsa csci-130-assignment/
+   30  mv csci-130-assignment/root5 csci-130-assignment/root0
+   31  lsa csci-130-assignment/
+   32  rmdir csci-130-assignment/deleteThisFolderWithFiles/
+   33  rm -rf csci-130-assignment/deleteThisFolderWithFiles/
+   34  lsa csci-130-assignment/
+   35  rmdir csci-130-assignment/deleteThisFolder/
+   36  lsa
+   37  lsa csci-130-assignment/
+   38  rm -rf csci-130-assignment/
+   39  lsa
+   40  ls -l
+   41  history > csci-130-assignment-lab1.txt
