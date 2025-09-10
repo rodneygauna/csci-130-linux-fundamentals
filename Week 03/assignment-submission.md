@@ -71,7 +71,7 @@ History exported from terminal:
 History exported from terminal:
 
 ```text
-       1  touch permission-test-file
+    1  touch permission-test-file
     2  ls -l
     3  echo 'Permissions are -rw-rw-r--'
     4  chmod u+xw permission-test-file
