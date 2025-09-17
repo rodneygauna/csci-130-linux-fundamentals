@@ -27,7 +27,7 @@ Professor Sverdlov showed how to copy files from the virtual machine to your hos
 3. Access it in the VM at `/media/sf_shared`
 
 ```bash
-$ cp assignment.txt /media/sf_shared/
+cp assignment.txt /media/sf_shared/
 ```
 
 #### Method 2: Copy and Paste
@@ -73,13 +73,13 @@ other::r--
 Give a specific user read and write access:
 
 ```bash
-$ setfacl -m u:alice:rw myfile.txt
+setfacl -m u:alice:rw myfile.txt
 ```
 
 Give a specific group read access:
 
 ```bash
-$ setfacl -m g:students:r myfile.txt
+setfacl -m g:students:r myfile.txt
 ```
 
 #### Removing ACL
@@ -87,7 +87,7 @@ $ setfacl -m g:students:r myfile.txt
 Remove ACL permissions:
 
 ```bash
-$ setfacl -b myfile.txt
+setfacl -b myfile.txt
 ```
 
 **Note:** Not all file systems support ACL. Use basic permissions (chmod) for most situations.
@@ -326,13 +326,13 @@ $ find /home -type f -name "*.txt"
 Find all text files in your home directory:
 
 ```bash
-$ find ~ -name "*.txt"
+find ~ -name "*.txt"
 ```
 
 Find all directories named "Documents":
 
 ```bash
-$ find / -type d -name "Documents"
+find / -type d -name "Documents"
 ```
 
 ### Saving Results
@@ -340,13 +340,13 @@ $ find / -type d -name "Documents"
 Save find results to a file:
 
 ```bash
-$ find /home -name "*.txt" > found_files.txt
+find /home -name "*.txt" > found_files.txt
 ```
 
 Hide error messages:
 
 ```bash
-$ find / -name "*.txt" 2> /dev/null
+find / -name "*.txt" 2> /dev/null
 ```
 
 ## Output Redirection in Linux
@@ -411,15 +411,15 @@ $ find / -name "*.xml" > results.txt 2>&1
 #### Save command results
 
 ```bash
-$ ps aux > running_processes.txt
-$ df -h > disk_usage.txt
-$ history > my_commands.txt
+ps aux > running_processes.txt
+df -h > disk_usage.txt
+history > my_commands.txt
 ```
 
 #### Separate output and errors
 
 ```bash
-$ find /home -name "*.txt" > found_files.txt 2> search_errors.txt
+find /home -name "*.txt" > found_files.txt 2> search_errors.txt
 ```
 
 #### Discard unwanted output
