@@ -1,0 +1,16 @@
+    1  wget ftp://ita.ee.lbl.gov/traces/NASA_access_log_Aug95.gz
+    2  ls
+    3  gunzip -d NASA_access_log_Aug95.gz 
+    4  find . -name "NASA_access_log_Aug95" | xargs awk '{print $1}' | sort | uniq
+    5  find . -name "NASA_access_log_Aug95" | xargs awk '{print $1}' | sort | uniq > unique_ips.txt
+    6  less unique_ips.txt 
+    7  find . -name "NASA_access_log_Aug95" | xargs awk '{print $1}' | sort | uniq -c | sort -nr > ip_request_counts.txt
+    8  less ip_request_counts.txt 
+    9  find . -name "NASA_access_log_Aug95" | xargs grep ' 404 ' > 404_errors.txt
+   10  find . -name "NASA_access_log_Aug95" | xargs grep '404' > 404_errors.txt
+   11  find . -name "NASA_access_log_Aug95" | xargs grep '200' > 200_success.txt
+   12  less 200_success.txt 
+   13  find . -name "NASA_access_log_Aug95" | xargs wc -l
+   14  find . -name "NASA_access_log_Aug95" | xargs grep '404 -' > 404_errors.txt
+   15  find . -name "NASA_access_log_Aug95" | xargs grep ' 200 ' > 200_success.txt
+   16  history > history.txt
