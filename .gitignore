@@ -1,6 +1,5 @@
 # Large data files that shouldn't be committed to GitHub
 *.gz
-NASA_access_log*
 *.log
 
 # Generated analysis files
@@ -29,3 +28,11 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Ignore NASA log file
+NASA_access_log*
+
+# Week 6 large files
+Week 06/apollo_lines.txt
+Week 06/apollo_status.txt
+Week 06/apollo_lines.txt
