@@ -1,0 +1,12 @@
+    1  cat NASA_access_log_Aug95 | awk '$7 ~ /apollo/' > apollo_lines.txt
+    2  cat apollo_lines.txt | wc -l
+    3  cat NASA_access_log_Aug95 | awk '$7 ~ /appolo/' | wc -l
+    4  cat NASA_access_log_Aug95 | awk '$7 ~ /apollo/ {print $7, $9}' > apollo_status.txt
+    5  cat apollo_status.txt | wc -l
+    6  cat NASA_access_log_Aug95 | awk '$7 ~ /apollo/ && $9 ~ /^30[0-9]$/ {print $7, $9}' | wc -l > apollo_30x_count.txt
+    7  cat NASA_access_log_Aug95 | awk '$7 ~ /apollo/ && $9 ~ /^30[0-9]$/ {print $7, $9}' | wc -l
+    8  cat NASA_access_log_Aug95 | awk '$7 ~ /apollo/ && $9 ~ /^40[0-9]$/ {print $7, $9}' | wc -l > apollo_40x_count.txt
+    9  cat NASA_access_log_Aug95 | awk '$7 ~ /apollo/ && $9 ~ /^50[0-9]$/ {print $7, $9}' | wc -l > apollo_50x_count.txt
+   10  cat NASA_access_log_Aug95 | awk '$7 ~ /apollo/ && $9 ~ /^40[0-9]$/ {print $7, $9}' | wc -l
+   11  cat NASA_access_log_Aug95 | awk '$7 ~ /apollo/ && $9 ~ /^50[0-9]$/ {print $7, $9}' | wc -l
+   12  history > Week\ 06/history.txt
