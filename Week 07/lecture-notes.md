@@ -195,6 +195,7 @@ my text lkdfgjlkdf 3
 ### What to Do If You Cannot Find a Pattern?
 
 Sometimes, you may encounter situations where you cannot find a specific pattern using regular expressions. Here are some strategies to help you in such cases:
+
 - Break down the pattern into smaller components and try to match each component separately.
 - Use online regex testers to experiment with different patterns and see how they match your input.
 - Consult documentation or resources for the specific tool you are using, as different tools may have variations in regex syntax.
