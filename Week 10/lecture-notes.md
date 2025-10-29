@@ -162,13 +162,13 @@ Hard links can be useful for creating incremental backups. By using hard links, 
 
 For example, you can create a backup directory and use hard links to create backups of files following these steps:
 
-1. Create a backup directory:
+**Step 1. Create a backup directory:**
 
 ```bash
 mkdir /home/user/backup
 ```
 
-2. Create hard links for files you want to back up:
+**Step 2. Create hard links for files you want to back up:**
 
 ```bash
 ln /home/user/important_file.txt /home/user/backup/important_file_backup.txt
@@ -176,7 +176,7 @@ ln /home/user/important_file.txt /home/user/backup/important_file_backup.txt
 
 This command creates a hard link named `important_file_backup.txt` in the `/home/user/backup/` directory that points to the same inode as the original file `important_file.txt`.
 
-3. Repeat the process for other files you want to back up.
+**Step 3. Repeat the process for other files you want to back up.**
 
 By using hard links for backups, you can efficiently manage your files and save disk space while ensuring that your important data is backed up.
 
