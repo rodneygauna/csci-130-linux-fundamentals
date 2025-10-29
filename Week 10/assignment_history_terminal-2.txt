@@ -1,0 +1,17 @@
+ 1275  echo "Hello from terminal 2" > my_pipe 
+ 1276  echo "This is message 2" > my_pipe 
+ 1277  cat my_pipe &
+ 1278  jobs
+ 1279  cat my_pipe 
+ 1280  echo "Read first message" > my_pipe 
+ 1281  echo "Message 1" > my_pipe &
+ 1282  echo "Message 2" > my_pipe &
+ 1283  echo "Message 3" > my_pipe &
+ 1284  jobs
+ 1285  cat my_pipe 
+ 1286  jobs
+ 1287  echo "Final message" > my_pipe 
+ 1288  jobs
+ 1289  cd ..
+ 1290  pwd
+ 1291  history > assignment_history_terminal-2.txt 

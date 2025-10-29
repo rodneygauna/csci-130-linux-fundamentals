@@ -1,0 +1,49 @@
+    1  sleep 60 &
+    2  jobs
+    3  sleep 45
+    4  jobs
+    5  bg 2
+    6  jobs
+    7  fg 1
+    8  bg 1
+    9  jobs
+   10  sleep 30 &
+   11  sleep 25 &
+   12  sleep 20 &
+   13  jobs
+   14  kill 2
+   15  likk %2
+   16  kill %2
+   17  jobs
+   18  mkdir test_symlinks
+   19  echo "This is the original file content" > original_file.txt
+   20  ech "Another test file" > ./test_symlinks/another_file.txt
+   21  echo "Another test file" > ./test_symlinks/another_file.txt
+   22  ls
+   23  ls test_symlinks/
+   24  cd test_symlinks/
+   25  ln -s ../original_file.txt original_file.txt
+   26  ls -l
+   27  cd ..
+   28  ln -s original_file.txt my_link.txt
+   29  ln -s original_file.txt different_name.txt
+   30  ls -l
+   31  cd test_symlinks/
+   32  ln -s another_file.txt link_to_another.txt
+   33  ln -s ../original_file.txt original_file.txt
+   34  ls -l
+   35  cd ..
+   36  pwd
+   37  ls
+   38  mkdir assignment_work
+   39  cd assignment_work/
+   40  mkfifo my_pipe
+   41  ls -l
+   42  cat my_pipe 
+   43  echo "Write first message" > my_pipe &
+   44  jobs
+   45  cat my_pipe &
+   46  jobs
+   47  cd ..
+   48  pwd
+   49  history > assignment_history_terminal-1.txt
