@@ -276,7 +276,7 @@ To compose and send an email (with a subject, recipient, and body) using the mai
 mail -s "Subject" recipient@example.com
 ```
 
-Replace "Subject" with the subject of your email and "recipient@example.com" with the email address of the recipient. After entering the command, you will be prompted to enter the body of the email. Type your message and press Ctrl + D to send it.
+Replace "Subject" with the subject of your email and "<recipient@example.com>" with the email address of the recipient. After entering the command, you will be prompted to enter the body of the email. Type your message and press Ctrl + D to send it.
 
 #### Attaching Files
 
