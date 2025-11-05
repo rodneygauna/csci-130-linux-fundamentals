@@ -223,3 +223,79 @@ This will replace the current content with the sorted lines.
 ## Mail Utility
 
 The mail utility is a command-line program used to send and receive email on Unix-like operating systems. It allows users to compose, send, and read emails directly from the terminal.
+
+### Installing Mail Utility
+
+To install the mail utility, you can use the package manager for your Linux distribution. For example, on Debian-based systems, you can use:
+
+```bash
+sudo apt-get install mailutils
+```
+
+Depending on your distribution, the package name may vary (e.g., `mailx`, `heirloom-mailx`).
+For Fedora-based systems, you can use:
+
+```bash
+sudo dnf install mailx
+```
+
+### Opening Mail Utility
+
+```bash
+mail
+```
+
+This command opens the mail utility, allowing you to read and manage your emails from the terminal. You can use various commands within the mail utility to navigate and interact with your messages.
+
+### Reading Emails
+
+When you open the mail utility, you will see a list of your emails. Each email is assigned a number. To read an email, type its number and press Enter. For example, to read the first email, type:
+
+```bash
+1
+```
+
+#### Additional Reading Commands
+
+- `n`: Move to the next email
+- `b`: Move to the previous email
+- `d`: Delete the current email
+- `t`: Tag the current email for deletion
+- `u`: Untag the current email
+
+### Marking as Read or Unread
+
+To mark an email as read, simply read it by typing its number. To mark an email as unread, you can use the `u` command while viewing the email.
+
+### Composing and Sending Emails
+
+To compose and send an email (with a subject, recipient, and body) using the mail utility, use the following command:
+
+```bash
+mail -s "Subject" recipient@example.com
+```
+
+Replace "Subject" with the subject of your email and "recipient@example.com" with the email address of the recipient. After entering the command, you will be prompted to enter the body of the email. Type your message and press Ctrl + D to send it.
+
+#### Attaching Files
+
+To attach a file to your email using the mail utility, use the `-a` option followed by the file path. For example:
+
+```bash
+mail -s "Subject" -a /path/to/file recipient@example.com
+```
+
+Replace `/path/to/file` with the actual path of the file you want to attach.
+
+### Additional Mail Commands
+
+- `m`: Move to the next email
+- `p`: Print the current email
+- `d`: Delete the current email
+- `q`: Quit the mail utility
+- `h`: Display the list of emails (header)
+- `r`: Reply to the current email
+- `f`: Forward the current email
+- `s <filename>`: Save the current email to a file
+- `!<command>`: Execute a shell command from within the mail utility
+- `?`: Display help information about mail commands
