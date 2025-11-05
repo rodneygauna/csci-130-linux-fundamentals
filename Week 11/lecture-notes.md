@@ -6,6 +6,7 @@
 - About the rest of the semester (Students presentations)
 - Text editor: the vi (vim)
 - Mail utility
+- Cron
 
 ## About the Rest of the Semester
 
@@ -299,3 +300,74 @@ Replace `/path/to/file` with the actual path of the file you want to attach.
 - `s <filename>`: Save the current email to a file
 - `!<command>`: Execute a shell command from within the mail utility
 - `?`: Display help information about mail commands
+
+## Cron
+
+Cron is a time-based job scheduler in Unix-like operating systems. It allows users to schedule tasks (known as "cron jobs") to run automatically at specified intervals.
+
+### Crontab
+
+The `crontab` command is used to create, edit, and manage cron jobs. Each user has their own crontab file, which contains a list of scheduled tasks.
+
+To edit your crontab file, use the following command:
+
+```bash
+crontab -e
+```
+
+This command opens your crontab file in the default text editor. You can add, modify, or delete cron jobs in this file.
+
+### Cron Job Syntax
+
+A cron job consists of six fields:
+
+```text
+* * * * * command_to_execute
+| | | | | |
+| | | | | +------ Command to be executed
+| | | | +-------- Day of the week (0 - 7) (Sunday is both 0 and 7)
+| | | +---------- Month (1 - 12)
+| | +------------ Day of the month (1 - 31)
+| +-------------- Hour (0 - 23)
++---------------- Minute (0 - 59)
+```
+
+### Example Cron Job
+
+#### Daily Script Execution
+
+To run a script every day at 2:30 AM, you would add the following line to your crontab file:
+
+```text
+30 2 * * * /path/to/your/script.sh
+```
+
+This cron job will execute the script located at `/path/to/your/script.sh` every day at 2:30 AM.
+
+#### Multiple Times a Day
+
+To run a script every 2, 5, and 8 minutes, you would add the following line to your crontab file:
+
+```text
+2,5,8 * * * * echo "The date is `date`" >> /home/user/dates.log
+```
+
+This cron job will execute the command every 2, 5, and 8 minutes.
+
+### Mail Notifications
+
+By default, cron sends an email to the user with the output of the cron job. You can specify a different email address by adding the following line at the top of your crontab file:
+
+```text
+MAILTO="your_email@example.com"
+```
+
+### Removing Cron Jobs
+
+To remove a cron job, simply delete the corresponding line from your crontab file and save the changes.
+
+Another option is to comment out the line by adding a `#` at the beginning of the line. This way, the cron job will be ignored without being deleted.
+
+```text
+#2,5,8 * * * * echo "The date is `date`" >> /home/user/dates.log
+```
