@@ -51,12 +51,24 @@ To exit vi/vim, you need to be in Normal Mode. Here are some common commands to 
 
 Vi/vim operates in two main modes:
 
-- **Normal Mode**: This is the default mode where you can navigate and manipulate text.
-- **Insert Mode**: This mode allows you to insert and edit text.
+- __Normal Mode__: This is the default mode where you can navigate and manipulate text.
+- __Insert Mode__: This mode allows you to insert and edit text.
 
 To switch from Normal Mode to Insert Mode, press `i`. To return to Normal Mode from Insert Mode, press `Esc`.
 
 There is also a third mode called Command-Line Mode, which you can access from Normal Mode by typing `:`. This mode allows you to enter commands for saving, quitting, and other operations.
+
+### Basic Vi/vim Commands After Opening a File
+
+- `:set number` or `:set nu`: Enable line numbers
+- `:set nonumber` or `:set nonu`: Disable line numbers
+- `:set syntax=on`: Enable syntax highlighting
+- `:set syntax=off`: Disable syntax highlighting
+- `:help <command>`: Get help on a specific command (e.g., `:help w` for help on the write command)
+- `:set all`: Show all current settings
+- `:set wrap`: Enable word wrap
+- `:set nowrap`: Disable word wrap
+- `:shell` or `:sh`: Open a shell from within vi/vim
 
 ### Basic Commands
 
@@ -81,6 +93,9 @@ To enable line numbers, you can use the command `:set number` or `:set nu`.
 - `$`: Move to the end of the line
 - `gg`: Move to the beginning of the file
 - `G`: Move to the end of the file
+- `w`: Move to the beginning of the next word
+- `b`: Move to the beginning of the previous word
+- `%`: Move to the matching parenthesis, bracket, or brace
 
 You can combine motion commands with numbers to move multiple lines or characters. For example, `5j` moves down five lines.
 
@@ -121,4 +136,90 @@ Windows are separate views into buffers. You can split the screen into multiple 
 - `Ctrl + w, h/j/k/l`: Move between windows
 - `:close`: Close the current window
 
+### Shell Commands
+
+You can execute shell commands from within vi/vim without leaving the editor.
+
+- `:!<command>`: Execute a shell command (e.g., `:!ls` to list files)
+- `:sh` or `:shell`: Open a shell from within vi/vim
+- `:exit`: Exit the shell and return to vi/vim
+- `:read <filename>` or `:r <filename>`: Insert the contents of a file into the current file at the cursor position
+- `:read !<command>` or `:r !<command>`: Insert the output of a shell command into the file at the current cursor position (e.g., `:read !date` to insert the current date)
+- `:write !<command>` or `:w !<command>`: Send the contents of the file to a shell command (e.g., `:write !sort` to sort the contents of the file)
+- `:30, 35s/old/new/g`: Substitute 'old' with 'new' from line 30 to 35
+
+### Mapping Keys
+
+You can create custom key mappings in vi/vim to streamline your workflow.
+
+- `:map <key> <command>`: Map a key to a command in Normal Mode
+- `:imap <key> <command>`: Map a key to a command in Insert Mode
+- `:nmap <key> <command>`: Map a key to a command in Normal Mode only
+- `:vmap <key> <command>`: Map a key to a command in Visual Mode only
+
+#### Copy and Paste Mappings
+
+```vim
+:map ^c "ayy"
+:map ^v "ap"
+```
+
+This maps `Ctrl + c` to copy the current line and `Ctrl + v` to paste it to the "a" buffer.
+
+### Example Use Cases
+
+#### Swapping Last Name and First Name
+
+```text
+Potter, Harry
+```
+
+To swap the last name and first name in vi/vim, you can use the following command in Normal Mode:
+
+```vim
+:s/\(.*\), \(.*\)/\2 \1/
+```
+
+This command uses a regular expression to match the last name and first name, then rearranges them.
+
+```text
+Harry Potter
+```
+
+#### Find and Replace
+
+```text
+drwxr-xr-x 2 user user 4096 Oct 28 10:00 Documents
+```
+
+To replace "user" with "admin" in the above line, you can use the following command in Normal Mode:
+
+```vim
+:%s/user/admin/g
+```
+
+#### Sorting Lines
+
+```text
+1 banana
+3 apple
+2 cherry
+```
+
+To sort the lines in alphabetical order, you can use the following command in Normal Mode:
+
+```vim
+:!sort
+```
+
+This will replace the current content with the sorted lines.
+
+```text
+3 apple
+1 banana
+2 cherry
+```
+
 ## Mail Utility
+
+The mail utility is a command-line program used to send and receive email on Unix-like operating systems. It allows users to compose, send, and read emails directly from the terminal.
