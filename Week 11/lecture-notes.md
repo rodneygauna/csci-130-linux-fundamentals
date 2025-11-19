@@ -10,7 +10,7 @@
 
 ## About the Rest of the Semester
 
-There are only three classes left:
+There are only four classes left:
 
 - November 4
 - November 18
