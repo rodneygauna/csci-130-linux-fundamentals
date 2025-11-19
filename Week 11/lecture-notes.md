@@ -1,4 +1,4 @@
-# CSCI-130 Linux Fundamentals - Week 10 (October 28, 2025) Lecture Notes
+# CSCI-130 Linux Fundamentals - Week 11 (November 4, 2025) Lecture Notes
 
 ## Lecture Outline
 
