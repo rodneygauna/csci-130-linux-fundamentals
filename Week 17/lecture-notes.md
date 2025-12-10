@@ -4,3 +4,4 @@
 
 - Attendance on Canvas
 - Class Presentations
+- Final (Test)
