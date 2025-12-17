@@ -2,7 +2,6 @@
 
 ## Lecture Outline
 
-- Attendance on Canvas
 - SSH
 - Copy files between local and remote machines: rsync and scp
 - Working with the network cards
@@ -25,6 +24,24 @@ ssh username@remote_host
 Replace `username` with your actual username on the remote machine and `remote_host` with the IP address or domain name of the remote machine.
 
 Note: SSH requires that the SSH server is running on the remote machine and that you have the necessary permissions to access it. The default port for SSH is 22, but it can be configured to use a different port for added security.
+
+### SSH Key-Based Authentication
+
+SSH key-based authentication is a more secure and convenient way to log into a remote machine without using passwords. It involves generating a pair of cryptographic keys: a private key (kept on your local machine) and a public key (placed on the remote machine).
+
+To generate an SSH key pair, you can use the following command:
+
+```bash
+ssh-keygen
+```
+
+This command will prompt you to specify the location to save the keys and optionally set a passphrase for added security.
+
+After generating the keys, you need to copy the public key to the remote machine using the `ssh-copy-id` command:
+
+```bash
+ssh-copy-id username@remote_host
+```
 
 ## Copy files between local and remote machines: rsync and scp
 
