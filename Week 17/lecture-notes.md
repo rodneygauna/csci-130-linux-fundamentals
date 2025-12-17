@@ -8,6 +8,8 @@
   - Assigning an IP address
   - Virtual network card
   - Bringing the network device up and down
+- The ping command
+- Compression tool (tar)
 - Class Presentations
 - Final (Test)
 
@@ -185,7 +187,7 @@ ifconfig -a up
 sudo systemctl start NetworkManager
 ```
 
-### The `ping` command
+## The `ping` command
 
 The `ping` command is used to test the reachability of a host on a network and to measure the round-trip time for messages sent from the originating host to a destination computer.
 
@@ -204,3 +206,35 @@ round-trip min/avg/max/stddev = 14.0/14.1/14.2/0.1 ms
 ```
 
 The output shows the response time for each packet sent to the destination. You can stop the ping command by pressing `Ctrl + C`.
+
+## Compression tool (tar)
+
+The `tar` command is used to create and manipulate archive files in Linux. It can combine multiple files and directories into a single archive file, which can be compressed to save space.
+
+### Creating a tar archive
+
+To create a tar archive, you can use the following command:
+
+```bash
+tar -cvf archive_name.tar /path/to/directory_or_file
+```
+
+In the above command:
+
+- `-c` stands for "create" a new archive.
+- `-v` stands for "verbose", which shows the progress of the operation.
+- `-f` specifies the name of the archive file.
+
+### Extracting a tar archive
+
+To extract a tar archive, you can use the following command:
+
+```bash
+tar -xvf archive_name.tar
+```
+
+In the above command:
+
+- `-x` stands for "extract" the contents of the archive.
+- `-v` stands for "verbose", which shows the progress of the operation.
+- `-f` specifies the name of the archive file.
