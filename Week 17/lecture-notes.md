@@ -74,6 +74,13 @@ In the above examples:
 - `-v` enables verbose output, showing the progress of the transfer.
 - `-z` enables compression during transfer, which can speed up the process for large files
 
+To copy files from remote to local, simply reverse the source and destination paths.
+
+```bash
+# Copy a file from remote to local
+rsync -avz user@remote_host:/path/to/remote/file /path/to/local/file
+```
+
 ### `scp`
 
 The basic syntax for `scp` is as follows:
@@ -94,6 +101,13 @@ scp -r user@remote_host:/path/to/remote/directory/ /path/to/local/directory/
 In the above examples:
 
 - `-r` stands for "recursive", which is necessary when copying directories.
+
+To copy files from remote to local, simply reverse the source and destination paths.
+
+```bash
+# Copy a file from remote to local
+scp user@remote_host:/path/to/remote/file /path/to/local/file
+```
 
 ## Working with the network cards
 
