@@ -45,7 +45,7 @@ ssh-copy-id username@remote_host
 
 ## Copy files between local and remote machines: rsync and scp
 
-It's important to know how to transfer files between your local machine and a remote server. Two common tools for this purpose are `scp` (secure copy) and `rsync`.
+It's important to know how to transfer files between your local machine and a remote server. Two common tools for this purpose are `scp` (secure copy) and `rsync` (remote sync).
 
 `rsync` is a powerful tool that allows you to synchronize files and directories between two locations over a secure SSH connection. It only transfers the differences between the source and destination, making it efficient for large file transfers.
 
@@ -64,8 +64,8 @@ Example usage:
 ```bash
 # Copy a file from local to remote
 rsync -avz /path/to/local/file user@remote_host:/path/to/remote/file
-# Copy a directory from remote to local
-rsync -avz user@remote_host:/path/to/remote/directory/ /path/to/local/directory/
+# Copy a directory from local to remote
+rsync -avz /path/to/local/directory/ user@remote_host:/path/to/remote/directory/
 ```
 
 In the above examples:
@@ -94,8 +94,8 @@ Example usage:
 ```bash
 # Copy a file from local to remote
 scp /path/to/local/file user@remote_host:/path/to/remote/file
-# Copy a directory from remote to local
-scp -r user@remote_host:/path/to/remote/directory/ /path/to/local/directory/
+# Copy a directory from local to remote
+scp -r /path/to/local/directory/ user@remote_host:/path/to/remote/directory/
 ```
 
 In the above examples:
